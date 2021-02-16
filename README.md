@@ -9,9 +9,4 @@ Te invito  a que mires el video del proyecto en el siguiente enlace [Henry-app](
 <img src="/assets/login.jpg" alt="drawing" width="200"/>
 <img src="/assets/1.jpg" alt="drawing" width="200"/>
 </div>
-<style>
-div{
-  display:flex;
-  }
-  
-</style>
+
