@@ -4,6 +4,6 @@ Henry app es una aplicación desarrollada con React native , expo y firebase , l
 
 Te invito  a que miremes el video del proyecto en el siguiente enlace [Henry-app](https://vimeo.com/512744811)
 
-![](/assets/portada.png)
-![](/assets/login.png)
-![](/assets/1.png)
+![](/assets/portada.jpg)
+![](/assets/login.jpg)
+![](/assets/1.jpg)
