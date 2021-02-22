@@ -9,7 +9,9 @@ You can download the app here [Henry-app](https://drive.google.com/file/d/1w_VrO
 You will need the following count to sign in email:invited@gmail.com  and password:123456
 
 I want to invite you to watch how it works on a video on  the following link [Henry-app](https://vimeo.com/512744811)
+
 ## Desktop version
+
 <img src="/assets/Home.png" alt="drawing" />
 <div >
 <img src="/assets/photo1.jpg" alt="drawing" width="300"/>
@@ -17,6 +19,7 @@ I want to invite you to watch how it works on a video on  the following link [He
 </div>
 
 ## Admin role
+
 <div >
 <img src="/assets/photo3.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo4.jpg" alt="drawing" width="300"/>
@@ -25,6 +28,7 @@ I want to invite you to watch how it works on a video on  the following link [He
 </div>
 
 ## Student role
+
 <div >
 <img src="/assets/photo8.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo9.jpg" alt="drawing" width="300"/>
