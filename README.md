@@ -6,11 +6,10 @@ Te invito  a que mires el video del proyecto en el siguiente enlace [Henry-app](
 <img src="/assets/Home.png" alt="drawing" />
 
 <div >
-<img src="/assets/portada.jpg" alt="drawing" width="300"/>
-<img src="/assets/login.jpg" alt="drawing" width="300"/>
-<img src="/assets/1.jpg" alt="drawing" width="300"/>
-<img src="/assets/2.jpg" alt="drawing" width="300"/>
-<img src="/assets/3.jpg" alt="drawing" width="300"/>
-
+<img src="/assets/photo1.jpg" alt="drawing" width="300"/>
+<img src="/assets/photo2.jpg" alt="drawing" width="300"/>
+<img src="/assets/photo3.jpg" alt="drawing" width="300"/>
+<img src="/assets/photo4.jpg" alt="drawing" width="300"/>
+<img src="/assets/photo5.jpg" alt="drawing" width="300"/>
 </div>
 
