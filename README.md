@@ -1,8 +1,11 @@
 # Henry app
-## Descripción 
-Henry app es una aplicación desarrollada con React native , expo y firebase , la cual tiene por objetivo conectar estudiantes y profesores siguiendo lo metodología aplicada en el curso Soy henry, la aplicación tiene un componente de administrador desde el cual el usuario podra invitar estudiantes al curso por correo , podra promover usurarios a administradores o profesores , podra crear grupos , editar , borrar  y asignarles profesor a cada uno .Desde el perfil de estudiante , cada estudiante tendra acceso a información relevante del curso , que dias tiene clase , que grupo le fue asignado , que clases ha tomado y ver la repetición de las clases.
+## Descrition
+Henry app is an  android aplication where Henry's students can be managed by an admin, we also create a desktop version where an admin can work easily and faster to manage henry's students.
+You can see the desktop version here [Henry-app](https://henry-app.vercel.app/)
+You can download the app here [Henry-app](https://drive.google.com/file/d/1w_VrO9h01H7OUXyvQiuuhEzZu_V92xeU/view?usp=sharing/)
+Yo will need the following count to sign in email:invited@gmail.com  and password:123456
 
-Te invito  a que mires el video del proyecto en el siguiente enlace [Henry-app](https://vimeo.com/512744811)
+I want to invited you to watch how it works on the following link [Henry-app](https://vimeo.com/512744811)
 <img src="/assets/Home.png" alt="drawing" />
 
 <div >
