@@ -1,6 +1,6 @@
 # Henry app
 ## Description
-Henry app is an android application where Henry's students can be managed by an admin, we also create a desktop version where an admin can work easily and faster.
+Henry app is an android application where Henry's students can be managed by an admin, we also create a desktop version where an admin can work easily and faster. To develop it we used React Native and firebase.
 
 You can see the desktop version here [Henry-app](https://henry-app.vercel.app/)
 
@@ -14,6 +14,9 @@ I want to invite you to watch how it works on a video on  the following link [He
 
 <img src="/assets/Home.png" alt="drawing" />
 <div >
+  
+## Home and sign in 
+
 <img src="/assets/photo1.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo2.jpg" alt="drawing" width="300"/>
 </div>
