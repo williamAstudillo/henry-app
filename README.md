@@ -14,14 +14,16 @@ I want to invite you to watch how it works on a video on  the following link [He
 <div >
 <img src="/assets/photo1.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo2.jpg" alt="drawing" width="300"/>
-<img src="/assets/photo3.jpg" alt="drawing" width="300"/>
 </div>
+
 ## Admin role
 <div >
+<img src="/assets/photo3.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo4.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo6.jpg" alt="drawing" width="300"/>
 <img src="/assets/photo7.jpg" alt="drawing" width="300"/>
 </div>
+
 ## Student role
 <div >
 <img src="/assets/photo8.jpg" alt="drawing" width="300"/>
