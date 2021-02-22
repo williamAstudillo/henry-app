@@ -79,7 +79,7 @@ export const ContGeneral = styled.View`
   position: absolute;
   top: 20%;
   width: 100%;
-  height: 80%;
+  height: 70%;
   z-index: 2; 
   background-color: white;
   align-items: center;
@@ -89,6 +89,8 @@ export const ContGeneral = styled.View`
 export const ContListGen = styled.ScrollView`
   width: 80%;
   max-width: 80%;
+  margin: 0;
+  padding: 0;
   margin-top: 25%;
 `
 
@@ -96,9 +98,9 @@ export const ContListGen = styled.ScrollView`
 
 
 export const BodyUnitItem = styled.View`
-  flex:1;
+  display: flex;
   flex-direction: row;
-  width: 120%;
+  width: 100%;
 `
 
 export const TextPrin = styled.Text`
@@ -108,18 +110,27 @@ export const TextPrin = styled.Text`
 
 /* Contenido table Cohorte */
 
-export const ContPirnTable = styled.TouchableOpacity`
+export const ContPirnTable = styled.View`
   width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`
+export const GridTable = styled.View`
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 `
 
 export const TextContTable = styled.Text`
   font-family: 'gadugib';
   font-size: 14px;
+  width: 50%;
+  max-width: 50%;
 `
+
 
 /* Botones */
 
@@ -129,10 +140,13 @@ export const ContBtnOut = styled.View`
 `
 
 export const BotonLog = styled.TouchableOpacity`
+  margin-top: 10px;
   padding: 3px 15px; 
   background-color: #FFFF01;
   align-items: center;
   border-radius: 10px;
+  min-height: 35px;
+  max-height: 35px;
 `
 
 export const TextButton = styled.Text`
@@ -172,3 +186,44 @@ export const ImgMinf = styled.View`
   align-items: center;
 `
 
+export const ContBtnLog = styled.View`
+  margin: 20px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+export const BackInOut = styled.View`
+  position: absolute;
+  background-color: rgba(0,0,0, .2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`
+export const BackInIn = styled.View`
+  width: 85%;
+  min-height: 50%;
+  max-height: 70%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+`
+export const ListAdd = styled.View`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`
+export const ContTextList = styled.View`
+  width: 50%;
+  max-width: 50%;
+`
+export const ListText = styled.Text`
+  font-family: 'gadugib';
+  font-size: 14px;
+`

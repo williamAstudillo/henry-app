@@ -1,40 +1,37 @@
-# Henry app
-## Description
-Henry app is an android application where Henry's students can be managed by an admin, we also create a desktop version where an admin can work easily and faster. To develop it we used React Native and firebase.
+# Auth0 Example
 
-You can see the desktop version here [Henry-app](https://henry-app.vercel.app/)
+<p>
+  <!-- iOS -->
+  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
+  <!-- Android -->
+  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
+  <!-- Web -->
+  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
+</p>
 
-You can download the apk here [Henry-app](https://drive.google.com/file/d/1w_VrO9h01H7OUXyvQiuuhEzZu_V92xeU/view?usp=sharing/)
+## 🚀 How to use
 
-You will need the following count to sign in email:invited@gmail.com  and password:123456
+- Install with `yarn` or `npm install`.
+- Create your own app on [Auth0](https://auth0.com).
+- Add the `AuthSession` auth URL to `Allowed Callback URLs` on Auth0.
+- Open `App.js` and replace `auth0ClientId` and `auth0Domain` with your app settings.
+- Run [`expo start`](https://docs.expo.io/versions/latest/workflow/expo-cli/), try it out.
 
-I want to invite you to watch how it works on a video on  the following link [Henry-app](https://vimeo.com/512744811)
+#### AuthSession callback URL
 
-## Desktop version
+The AuthSession helps you with browser authentication, without the need of an additional server or website. To use this with Auth0 authentication flows, we need to tell Auth0 that the callback URLs are allowed.
 
-<img src="/assets/Home.png" alt="drawing" />
-<div >
-  
-## Home and sign in 
+Each Expo user has it's own URL for different projects, the basic structure of this URL is `https://auth.expo.io/@your-username/your-expo-app-slug`. If you are signed in as `awesome-ppl`, and your app is called `meme-explorer`, your URL looks like `https://auth.expo.io/@awesome-ppl/meme-explorer`.
 
-<img src="/assets/photo1.jpg" alt="drawing" width="300"/>
-<img src="/assets/photo2.jpg" alt="drawing" width="300"/>
-</div>
+> [Read more about AuthSession here](https://docs.expo.io/versions/latest/sdk/auth-session/)
 
-## Admin role
+#### Auth0 app settings
 
-<div >
-<img src="/assets/photo3.jpg" alt="drawing" width="300"/>
-<img src="/assets/photo4.jpg" alt="drawing" width="300"/>
-<img src="/assets/photo6.jpg" alt="drawing" width="300"/>
-<img src="/assets/photo7.jpg" alt="drawing" width="300"/>
-</div>
+Both the `auth0ClientId` and `auth0Domain` needs to match your Auth0 app settings.
 
-## Student role
+![Application Settings](https://i.imgur.com/Io9I4qg.jpg)
 
-<div >
-<img src="/assets/photo8.jpg" alt="drawing" width="300"/>
-<img src="/assets/photo9.jpg" alt="drawing" width="300"/>
-</div>
+## 📝 Notes
 
-
+- [Expo AuthSession docs](https://docs.expo.io/versions/latest/sdk/auth-session/)
+- [Auth0 React/SPA quickstart guide](https://auth0.com/docs/quickstart/spa/react)

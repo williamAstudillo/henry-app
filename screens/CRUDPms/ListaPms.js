@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect, Component } from 'react'; 
 import { StyleSheet, View, Button, Alert } from 'react-native';
 import { Icon, ListItem, Text } from 'react-native-elements';
+import Footer from '../Footer/Footer';
 import {
     Contenedor,
     Encabezado,
@@ -12,15 +13,13 @@ import {
     BackImg,
     ContText,
     TituloCard,
-    ContMinf,
     ContBtnOut,
-    IconContent,
     TextPrin,
     ImgSise,
     TextButtonOp2,
     ContPirnTable,
     TextContTable,
-    LogoSise,
+    ImgListUn,
     BotonLog,
     TextButton,
     BodyUnitItem
@@ -29,80 +28,52 @@ let card1 = require('../../src/assets/img/imgCard1.png');
 import firebase from '../../database/database';
 
 
-const ListaPms = (props) =>{
+  
 
-    const [pms, setPms] = useState([])
-    useEffect(() => {
-        firebase.db.collection('users').where('rol', '==', 'pm').onSnapshot((snap) => {
-            const PMs = [];
-            snap.docs.forEach((doc) => {
-                const {last_name, first_name, cohorte, email} = doc.data()
-                if(props.route.params.cohorte === cohorte){
-                    PMs.push({
-                        last_name,
-                        first_name,
-                        cohorte,
-                        email,
-                        id: doc.id,
-                    })
-                    pms.push({
-                        last_name,
-                        first_name,
-                        cohorte,
-                        email,
-                        id: doc.id,
-                    })
-                }
-            });
-            setPms(PMs)
-        });
-    }, []);
-    const eliminar = async (pm) =>{
-
-        const dbRef = firebase.db.collection('users').doc(pm.id);
-        if (confirm('Esta seguro de querer eliminar este PMs?')) {
-			await dbRef.set({
-                cohorte: '',
-                grupo: ''
-            });
-			alert('Se quito al PM del Cohorte');
-        }
-		else {
-        }
-        
-        Alert.alert(
-                'Esta Eliminando un Usuario',
-                'Esta seguro de querer eliminar este Usuario',
-                [
-                    {
-                        text    : 'Cancel',
-                        onPress : () => console.log('Cancel Pressed'),
-                        style   : 'cancel'
-                    },
-                    {
-                        text    : 'OK',
-                        onPress : async () => {
-                await dbRef.delete();   
-                navigation.navigate('Henry Admin');         
-                        }
-                    }
-                ],
-                { cancelable: false }
-            ); 
+class ListaPms extends Component{
+    state = {
+        grupo: [],
+        cohorte: '',
+        idCohorte: ''
     }
+   componentDidMount(){
+        firebase.db.collection('cohorte').where("nombre", "==", this.props.route.params.cohorte).onSnapshot((snap) => {
+            let coh = [];
+            let grupos = []
+            snap.docs.forEach((doc) => {
+                this.setState({
+                    idCohorte : doc.id
+                })
+            })
+            firebase.db.collection('cohorte').doc(this.state.idCohorte).collection('grupos')
+            .get()
+            .then(querySnapshot=>{
+                querySnapshot.forEach(doc => {
+                    const {numero, pms} = doc.data()
+                    grupos[numero] = pms
 
+                })
+            })
+            this.setState({
+                grupo: grupos
+            })
+            this.render()
+        })
+
+    }
+    render(){
     return (
-        <Contenedor style={styles.container}>
+        <Contenedor >
             <Encabezado >
                 <ConTitle
-                onPress={() => props.navigation.goBack()}
+                onPress={() => this.props.navigation.goBack()}
                 >
                 <Icon
                     solid={true}
                     name="chevron-left"
                     type="font-awesome-5"
                 />
-                <TextTitle>Grupos PP</TextTitle>
+                <TextTitle>Lista de PM</TextTitle>
                 </ConTitle>
             </Encabezado>
             <Options>
@@ -117,24 +88,15 @@ const ListaPms = (props) =>{
             <ContGeneral>
                 <ContListGen>
                     {
-                        pms.map((pm, i) => (
-                            <ListItem key={i} style={{ width: '100%', }}>
-                            <BodyUnitItem >
-                              <ContText>
-                                  {console.log(pm)}
-                                  <Text>Hola</Text>
-                                <TextPrin>{`${pm.last_name} ${pm.first_name}`}</TextPrin>
-                              </ContText>
-                              <ContBtnOut >
-                                  <BotonLog onPress={() => eliminar(pm)}>
-                                    <TextButton>Eliminar de este cohorte</TextButton>
-                                  </BotonLog>
-                                </ContBtnOut>
-                            </BodyUnitItem>
-                          </ListItem>
-                        ))
+                        this.state.grupo[1] ? this.state.grupo[0] : 'Nada'
                     }
                 </ContListGen>
+                <ContBtnOut >
+                        <BotonLog onPress={() => this.render()}>
+                            <TextButton>Agregar PM</TextButton>
+                        </BotonLog>
+                    </ContBtnOut>
+                <Footer navigation={this.props.navigation}/>
             </ContGeneral>
             {
                 pms.length === 0 && <ContBtnOut >
@@ -143,36 +105,9 @@ const ListaPms = (props) =>{
                 </BotonLog>
               </ContBtnOut>
             }
-            <View>
-            </View>
+            {/* Menu inferior General */}
+			      <Footer navigation={props.navigation}/>
         </Contenedor>
-    );
+    );}
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    header: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: '#e5e500'
-    },
-    marco: {
-        backgroundColor: '#e5e500',
-        textAlign: 'center'
-    },
-    text: {
-        fontSize: 30
-    },
-    avatar: {
-        width: 100,
-        height: 100
-    },
-    pm: {
-        /* fontWeight : 700, */
-        fontSize: 20
-    }
-});
-
 export default ListaPms;

@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 //Redux
-import {Provider} from 'react-redux';
-import configureStore  from './configureStore'
+import { Provider } from 'react-redux';
+import configureStore from './configureStore'
 let store = configureStore()
 
 //Navigation
@@ -44,6 +44,7 @@ import PairPrograming from './screens/pairPrograming';
 import CrearGrupos from './screens/Cohortes/CrearGrupo';
 import Calendario from './screens/Calendario';
 import ModificarClases from './screens/Cohortes/Clases';
+import JobPrep from './screens/JobPreps';
 
 
 const Stack = createStackNavigator();
@@ -85,12 +86,13 @@ export default function App() {
 						fontWeight: 'bold'
 					}
 				}}
-				>
+			>
 
 				<Stack.Screen name="Home" component={Home} />
 				<Stack.Screen name="Perfil" component={Profile} />
 				<Stack.Screen name="Grupos PP" component={CrearPp} />
 				<Stack.Screen name="Lista PMs" component={ListaPms} />
+				<Stack.Screen name="Job Preps" component={JobPrep} />
 				<Stack.Screen name="Iniciar Sesion" component={Login} />
 				<Stack.Screen name="SelectTime" component={SelectTime} />
 				<Stack.Screen name="Menu Usuario" component={UserView} />
@@ -104,7 +106,7 @@ export default function App() {
 				<Stack.Screen name="Crear Cohorte" component={CrearCohorte} />
 				<Stack.Screen name="Perfil Alumno" component={AlumnoProfile} />
 				<Stack.Screen name="Editar Cohorte" component={EditarCohorte} />
-				<Stack.Screen name="Alumno Cohorte" component={AlumnosCohorte}/>
+				<Stack.Screen name="Alumno Cohorte" component={AlumnosCohorte} />
 				<Stack.Screen name="Mensaje Registro" component={MsgRegistro} />
 				<Stack.Screen name="Importar Henrys" component={ImportHenrys} />
 				<Stack.Screen name='Cohorte de Alumno' component={YourCohort} />

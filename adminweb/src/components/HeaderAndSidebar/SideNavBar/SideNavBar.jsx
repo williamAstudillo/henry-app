@@ -14,7 +14,7 @@ function SideNavBar({setSelect, setCargando}) {
 
   const signOut =()=> {
     localStorage.setItem('user', null)
-    window.location.href = 'http://localhost:3000';
+    window.location.href = `${process.env.REACT_APP_API_URL}`;
   }
 
   const handlechange = (option)=>{
@@ -42,6 +42,7 @@ function SideNavBar({setSelect, setCargando}) {
       setActiveUser('');
       setActiveBook('');
       setActiveHat('active');
+      setSelect('Instructores');
       setCargando(true);
       setTimeout(()=>{
         setCargando(false);

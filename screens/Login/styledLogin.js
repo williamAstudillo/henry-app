@@ -76,12 +76,13 @@ export const ContSocialRed = styled.View`
 export const TextButton = styled.Text`
   font-family: 'gadugib';
   font-size: 18px;
+  margin: 0 auto;
 `
 
 export const IconSocialRed = styled.View`
   margin-top:20px;
   width: 25%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `
 
