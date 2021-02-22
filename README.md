@@ -4,7 +4,7 @@ Henry app is an android application where Henry's students can be managed by an 
 
 You can see the desktop version here [Henry-app](https://henry-app.vercel.app/)
 
-You can download the app here [Henry-app](https://drive.google.com/file/d/1w_VrO9h01H7OUXyvQiuuhEzZu_V92xeU/view?usp=sharing/)
+You can download the apk here [Henry-app](https://drive.google.com/file/d/1w_VrO9h01H7OUXyvQiuuhEzZu_V92xeU/view?usp=sharing/)
 
 You will need the following count to sign in email:invited@gmail.com  and password:123456
 
